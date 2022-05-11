@@ -1,8 +1,7 @@
 import "./App.css"
 
-const { Component, Children, PropTypes } = React
+import React , {Component}from 'react';
 
-const id = <div id="app"></div>;
 /* It takes a string of text, splits it into individual characters, and then wraps each character in a
 span tag with a unique animation delay */
 class SplitText extends Component {
@@ -35,5 +34,16 @@ class Layout extends Component {
   }
 }
 
-/* Rendering the `id` variable to the `app` div in the HTML. */
-ReactDOM.render(id, document.getElementById("app"))
+export default class App extends Component {
+  
+  render() {
+    return (
+      <>
+      <Layout />
+      <h2>
+      <SplitText copy="TechOps" role="heading" />  
+      </h2>
+      </>
+    )
+  }
+}
